@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -6,163 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
-  cols: any[] = [];
-  cars: any[] = [];
+  @Input() bodyRef!: TemplateRef<any>;
+  @Input() cols: any[] = [];
+  @Input() rowData: any[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
-    this.cols = [
-      { field: 'vin', header: 'Vin' },
-      { field: 'year', header: 'Year' },
-      { field: 'brand', header: 'Brand' },
-      { field: 'color', header: 'Color' },
-    ];
-    this.cars = [
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-      {
-        vin: 'vin',
-        year: '1212',
-        brand: 'branc',
-        color: 'clr',
-      },
-    ];
+
+
   }
 }
