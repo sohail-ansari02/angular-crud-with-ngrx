@@ -2,14 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-student',
-  template: '<router-outlet></router-outlet>',
-  styleUrls: ['./student.component.scss']
+  templateUrl: './student.component.html',
+  styleUrls: ['./student.component.scss'],
 })
 export class StudentComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

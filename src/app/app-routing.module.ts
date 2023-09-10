@@ -11,6 +11,9 @@ const routes: Routes = [
     path: 'student',
     loadChildren: () =>
       import('./featured/student/student.module').then((m) => m.StudentModule),
+      data: {
+        pageName: 'Student'
+      }
   },
 ];
 
