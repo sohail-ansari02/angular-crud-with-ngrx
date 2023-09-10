@@ -1,0 +1,48 @@
+<p-table
+  #dt1
+  [value]="cars"
+  [globalFilterFields]="['vin', 'year']"
+  [paginator]="true"
+  [rows]="10"
+  [rowsPerPageOptions]="[10,25,50]"
+  [showCurrentPageReport]="true"
+>
+  <ng-template pTemplate="caption">
+    <div class="table-header">
+      <!-- <span class="p-input-icon-left p-ml-auto"> -->
+      <input
+        class="table-header__search-bar"
+        pInputText
+        type="text"
+        (input)="dt1.filterGlobal($any($event.target)?.value, 'contains')"
+        placeholder="Search students by name"
+      />
+      <div class="table-header__btns">
+        <app-button> Add New </app-button>
+        <app-button> Export </app-button>
+      </div>
+
+      <!-- </span> -->
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let col of cols">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-car>
+    <tr>
+      <td *ngFor="let col of cols">
+        {{ car[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+
+  <!-- <ng-template pTemplate="paginatorright">
+  </ng-template>
+  <ng-template let-item pTemplate="paginatordropdownitem">
+    {{ item.value }} - per page
+  </ng-template> -->
+</p-table>

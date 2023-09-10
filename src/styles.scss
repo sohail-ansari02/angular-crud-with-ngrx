@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/primeflex/primeflex.css');
 *,
 *::after,
 *::before {
@@ -10,6 +10,7 @@
   --primary-2: #4a86e8;
   --on-primary: #000;
   --secondary-1: #d9d9d9;
+  --secondary-2: #eee;
   --surface: #fff;
   --background: #d9d9d9;
 
@@ -27,6 +28,10 @@ body {
 
 }
 .container {
-  max-width: 1520px;
-  margin: auto;
+  max-width: 1520px !important;
+  margin: auto !important;
+}
+
+.p-datatable .p-datatable-tbody > tr > td{
+  border: 0;
 }
