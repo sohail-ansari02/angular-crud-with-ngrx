@@ -10,6 +10,7 @@ export class TableComponent implements OnInit {
   @Input() bodyRef!: TemplateRef<any>;
   @Input() cols: any[] = [];
   @Input() rowData: any[] = [];
+  @Input() filters: any[] = [];
 
   constructor() {}
 

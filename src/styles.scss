@@ -35,3 +35,10 @@ body {
 .p-datatable .p-datatable-tbody > tr > td{
   border: 0;
 }
+label{
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

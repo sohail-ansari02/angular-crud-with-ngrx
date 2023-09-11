@@ -1,7 +1,7 @@
 <p-table
   #dt
   [value]="rowData"
-  [globalFilterFields]="['vin', 'year']"
+  [globalFilterFields]="filters"
   [paginator]="true"
   [rows]="10"
   [rowsPerPageOptions]="[10, 25, 50]"
@@ -11,7 +11,7 @@
     <div class="table-header">
       <!-- <span class="p-input-icon-left p-ml-auto"> -->
       <input
-        class="table-header__search-bar"
+        class="table-header__search-bar text-[#000]"
         pInputText
         type="text"
         (input)="dt.filterGlobal($any($event.target)?.value, 'contains')"

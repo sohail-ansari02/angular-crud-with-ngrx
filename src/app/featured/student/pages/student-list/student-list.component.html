@@ -1,4 +1,9 @@
-<app-table [bodyRef]="tableBody" [cols]="cols" [rowData]="rowData"></app-table>
+<app-table
+  [filters]="['firstName', 'lastName']"
+  [bodyRef]="tableBody"
+  [cols]="cols"
+  [rowData]="rowData"
+></app-table>
 <app-button> Edit </app-button>
 <ng-template #tableBody let-rowData>
   <tr>
